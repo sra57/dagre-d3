@@ -40,11 +40,12 @@ body {
 var g = new dagreD3.graphlib.Graph().setGraph({});
 
 ["normal", "vee", "undirected"].forEach(function(arrowhead) {
-  g.setNode(arrowhead + "1", { label: " " });
+  g.setNode(arrowhead + "1", { label: " ", numCategories: 7 });
   g.setNode(arrowhead + "2", { label: " " });
   g.setEdge(arrowhead + "1", arrowhead + "2", {
     arrowhead: arrowhead,
-    label: arrowhead
+    label: arrowhead,
+    categoryIndex: 6
   });
 });
 
